@@ -8,4 +8,18 @@ let date = currentDateInfo.getDate()
 let month = months[currentDateInfo.getMonth()]
 let year = currentDateInfo.getFullYear()
 
-document.getElementById("date-display").innerHTML = day + ", " + month + " " + date + ", " + year
+document.getElementById("show-date").innerHTML = day + " " + month + " " + date + ", " + year
+
+
+function getCurrentTime() {
+    let currentTimeInfo = new Date()
+    let ampm = currentTimeInfo.getHours() >= 12 ? 'PM' : 'AM'
+    let hour = ((currentTimeInfo.getHours() + 11) % 12 + 1)
+    currentTime = hour + ":" + currentTimeInfo.getMinutes()
+    document.getElementById("show-time").innerHTML = currentTime + " " + ampm
+}
+
+setInterval(getCurrentTime, 1000)
+
+
+
