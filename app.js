@@ -1,3 +1,4 @@
+//
 let currentDateInfo = new Date()
 
 let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
@@ -8,15 +9,18 @@ let date = currentDateInfo.getDate()
 let month = months[currentDateInfo.getMonth()]
 let year = currentDateInfo.getFullYear()
 
-document.getElementById("show-date").innerHTML = day + " " + month + " " + date + ", " + year
-
+document.getElementById("show-day").innerHTML = day
+document.getElementById("show-date").innerHTML = month + " " + date + ", " + year
 
 function getCurrentTime() {
     let currentTimeInfo = new Date()
-    let ampm = currentTimeInfo.getHours() >= 12 ? 'PM' : 'AM'
+
     let hour = ((currentTimeInfo.getHours() + 11) % 12 + 1)
-    currentTime = hour + ":" + currentTimeInfo.getMinutes()
-    document.getElementById("show-time").innerHTML = currentTime + " " + ampm
+    let minute = ("0" + currentTimeInfo.getMinutes()).slice(-2)
+    let second = ("0" + currentTimeInfo.getSeconds()).slice(-2)
+    let ampm = currentTimeInfo.getHours() >= 12 ? 'pm' : 'am'
+
+    document.getElementById("show-time").innerHTML = hour + ":" + minute + ":" + second + " " + ampm 
 }
 
 setInterval(getCurrentTime, 1000)
