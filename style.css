@@ -21,3 +21,8 @@ body {
     background-repeat: no-repeat;
     background-color: black;
   }
+
+button {
+    margin: 0 auto;
+    display: block;
+}

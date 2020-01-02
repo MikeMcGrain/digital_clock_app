@@ -28,7 +28,14 @@ setInterval(getCurrentTime, 1000)
 
 // toggles time between 12 and 24-hour formats
 let twelveHourFormat = true
+document.getElementById("toggle-time-btn").innerHTML = "24-Hour Clock"
 
 function toggleTime() {
     twelveHourFormat = !twelveHourFormat
+    if (document.getElementById("toggle-time-btn").innerHTML == "24-Hour Clock") {
+        document.getElementById("toggle-time-btn").innerHTML = "12-Hour Clock"
+    }
+    else {
+        document.getElementById("toggle-time-btn").innerHTML = "24-Hour Clock"
+    }
 }
