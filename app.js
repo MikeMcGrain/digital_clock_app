@@ -12,23 +12,11 @@ let year = currentDateInfo.getFullYear()
 document.getElementById("show-day").innerHTML = day
 document.getElementById("show-date").innerHTML = month + " " + date + ", " + year
 
-//get current time and display in different formats
-let twelveHourFormat = true
-
-function toggleTime() {
-    twelveHourFormat = !twelveHourFormat
-}
-
+//get current time info, then display
 function getCurrentTime() {
     let currentTimeInfo = new Date()
 
-    if (twelveHourFormat === true) {
-        var hour = ((currentTimeInfo.getHours() + 11) % 12 + 1)
-    }
-    else {
-        var hour = ("0" + currentTimeInfo.getHours()).slice(-2)
-    }
-    
+    let hour = twelveHourFormat ? ((currentTimeInfo.getHours() + 11) % 12 + 1) : ("0" + currentTimeInfo.getHours()).slice(-2) 
     let minute = ("0" + currentTimeInfo.getMinutes()).slice(-2)
     let second = ("0" + currentTimeInfo.getSeconds()).slice(-2)
     let ampm = currentTimeInfo.getHours() >= 12 ? 'pm' : 'am'
@@ -37,3 +25,10 @@ function getCurrentTime() {
 }
 
 setInterval(getCurrentTime, 1000)
+
+// toggles time between 12 and 24-hour formats
+let twelveHourFormat = true
+
+function toggleTime() {
+    twelveHourFormat = !twelveHourFormat
+}
