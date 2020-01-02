@@ -1,4 +1,4 @@
-//
+// get current date info, then display
 let currentDateInfo = new Date()
 
 let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
@@ -12,6 +12,7 @@ let year = currentDateInfo.getFullYear()
 document.getElementById("show-day").innerHTML = day
 document.getElementById("show-date").innerHTML = month + " " + date + ", " + year
 
+// get current time, then display
 function getCurrentTime() {
     let currentTimeInfo = new Date()
 
