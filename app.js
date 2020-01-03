@@ -15,8 +15,8 @@ document.getElementById("show-date").innerHTML = month + " " + date + ", " + yea
 //get current time info, then display
 function getCurrentTime() {
     let currentTimeInfo = new Date()
-
-    let hour = twelveHourFormat ? ((currentTimeInfo.getHours() + 11) % 12 + 1) : ("0" + currentTimeInfo.getHours()).slice(-2) 
+    console.log("twelveHourFormat: " + twelveHourFormat)
+    let hour = twelveHourFormat == true ? ((currentTimeInfo.getHours() + 11) % 12 + 1) : ("0" + currentTimeInfo.getHours()).slice(-2) 
     let minute = ("0" + currentTimeInfo.getMinutes()).slice(-2)
     let second = ("0" + currentTimeInfo.getSeconds()).slice(-2)
     let ampm = currentTimeInfo.getHours() >= 12 ? 'pm' : 'am'
