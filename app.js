@@ -10,18 +10,18 @@ let month = months[currentDateInfo.getMonth()]
 let year = currentDateInfo.getFullYear()
 
 document.getElementById("show-day").innerHTML = day
-document.getElementById("show-date").innerHTML = month + " " + date + ", " + year
+document.getElementById("show-date").innerHTML = `${month} ${date}, ${year}`
 
 //get current time info, then display
 function getCurrentTime() {
     let currentTimeInfo = new Date()
     console.log("twelveHourFormat: " + twelveHourFormat)
-    let hour = twelveHourFormat == true ? ((currentTimeInfo.getHours() + 11) % 12 + 1) : ("0" + currentTimeInfo.getHours()).slice(-2) 
+    let hour = twelveHourFormat ? ((currentTimeInfo.getHours() + 11) % 12 + 1) : ("0" + currentTimeInfo.getHours()).slice(-2) 
     let minute = ("0" + currentTimeInfo.getMinutes()).slice(-2)
     let second = ("0" + currentTimeInfo.getSeconds()).slice(-2)
     let ampm = currentTimeInfo.getHours() >= 12 ? 'pm' : 'am'
 
-    document.getElementById("show-time").innerHTML = hour + ":" + minute + ":" + second + " " + ampm 
+    document.getElementById("show-time").innerHTML = `${hour}:${minute}:${second} ${ampm}` 
 }
 
 setInterval(getCurrentTime, 1000)
@@ -32,10 +32,5 @@ document.getElementById("toggle-time-btn").innerHTML = "24-Hour Clock"
 
 function toggleTime() {
     twelveHourFormat = !twelveHourFormat
-    if (document.getElementById("toggle-time-btn").innerHTML == "24-Hour Clock") {
-        document.getElementById("toggle-time-btn").innerHTML = "12-Hour Clock"
-    }
-    else {
-        document.getElementById("toggle-time-btn").innerHTML = "24-Hour Clock"
-    }
+    twelveHourFormat ? document.getElementById("toggle-time-btn").innerHTML = "12-Hour Clock" : document.getElementById("toggle-time-btn").innerHTML = "24-Hour Clock"
 }
