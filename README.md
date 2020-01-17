@@ -14,7 +14,7 @@ Take a look [here](https://mikemcgrain.github.io/digital_clock_app/)
 
 ## Summary
 
-While I wrote code quickly, I really enjoy making it as lean as possible.  I also added a button that toggles the time format between 12-hour and 24-hour formats.  
+While I was able to write this quickly, I really enjoy making it as lean as possible.  I also added a button that toggles the time format between 12-hour and 24-hour formats.  
 
 ## Author
 
