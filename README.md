@@ -2,7 +2,7 @@
 
 <br>
 
-A simple digital clock app written in HTML, minimal CSS, and pure JavaScript (no external libraries or frameworks).
+A simple app which displays the time and date in browser. Written in HTML, minimal CSS, and pure JavaScript (no external libraries or frameworks).
 
 <br>
 
@@ -14,7 +14,7 @@ Take a look [here](https://mikemcgrain.github.io/digital_clock_app/)
 
 ## Summary
 
-While I was able to write this quickly, I really enjoy making it as lean as possible.  I also added a button that toggles the time format between 12-hour and 24-hour formats.  
+The logic on this is simple, but I enjoyed trying to keep the code as lean as possible.  I also added a button that toggles the time format between 12-hour and 24-hour formats.  
 
 ## Author
 
