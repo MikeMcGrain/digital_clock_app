@@ -5,7 +5,7 @@ let twelveHourFormat = true
 
 document.getElementById("toggle-time-button").addEventListener("click", () => {
   twelveHourFormat = !twelveHourFormat
-  document.getElementById("toggle-time-button").innerText = twelveHourFormat ? "12-Hour Clock" : "24-Hour Clock"
+  document.getElementById("toggle-time-button").innerText = twelveHourFormat ?  "24-Hour Clock" : "12-Hour Clock"
   renderDateAndTime()
 })
 

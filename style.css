@@ -1,27 +1,33 @@
+body {
+  text-align: center;
+  color: antiquewhite;
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-color: black;  
+}
+
 h1 {
-    text-align: center;
-    color: whitesmoke;
-    font-size: 14vw;   
-    font-variant: small-caps;
-    margin-top: 120px;
-    margin-bottom: 5px;
-    text-decoration: underline;
+  font-size: 14vw;
+  font-variant: small-caps;
+  margin-top: 120px;
+  margin-bottom: 5px;
+  text-decoration: underline;
 }
 
 h2, h3 {
-    text-align: center;
-    color: whitesmoke;
-    font-size: 7vw;
-    margin: 2px;
+  font-size: 7vw;
+  margin: 2px;
 }
 
-body {
-    background-image: url("images/background.jpg");
-    background-repeat: no-repeat;
-    background-color: black;
-  }
-
 button {
-    margin: 0 auto;
-    display: block;
+  color: antiquewhite;
+  font-size: 2vh;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  color: lightgray;
 }
